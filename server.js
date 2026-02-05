@@ -72,6 +72,7 @@ app.get("/api/support", (req, res) =>
 app.get("/api/feedback", (req, res) =>
   res.sendFile(path.join(__dirname, "../frontend/html/feedback.html"))
 );
+// GOES TO SIGNUP
 app.get("/api/signup", (req, res) =>
   res.sendFile(path.join(__dirname, "../frontend/html/signup.html"))
 );
