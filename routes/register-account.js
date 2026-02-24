@@ -18,7 +18,7 @@ router.post("/create_acc", async(req,res)=> {
             email_address:req.body.email_address,
             password: hashedpassword
         });
-        res.redirect("/login")
+res.status(201).json({ message: "Account created successfully" });
         
         console.log("Successfully saved the informations")
         

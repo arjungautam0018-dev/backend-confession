@@ -28,8 +28,7 @@ router.post(
         });
 
     
-        res.redirect("/homepage")
-    }
+res.status(201).json({ message: "Gunaso submitted successfully" });    }
 )
 
 // Fetch logic

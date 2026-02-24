@@ -19,11 +19,11 @@ router.post("/login", (req, res) => {
   if (password === process.env.ADMIN_PASSWORD) {
     req.session.isAdmin = true;          // set admin session
     console.log("Session created for Admin ");
-    return res.redirect("/admin/dashboard");
+    return res.status(200).json({ message: "Login successful", admin: true });
   }
 
   // Wrong password → redirect back to login with error flag
-  return res.redirect("/admin?error=1");
+  return res.status(401).json({ message: "Invalid password", admin: false});
 });
 
 // ====================

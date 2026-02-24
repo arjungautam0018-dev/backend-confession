@@ -41,6 +41,8 @@ app.get("/api", (req, res) => {
   res.json({ status: "API is running ✅" });
 });
 
+app.get("/", (req,res) => res.json({ message: "Backend API running" }));
+
 /* ---------- START ---------- */
 app.listen(PORT, () => {
   console.log(`🚀 API running on http://localhost:${PORT}`);
