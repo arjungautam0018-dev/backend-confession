@@ -37,11 +37,10 @@ app.use("/api/like", require("./routes/like"));
 app.use("/admin", require("./routes/admin_login"));
 
 /* ---------- TEST ENDPOINT ---------- */
-app.get("/api", (req, res) => {
-  res.json({ status: "API is running ✅" });
+app.get("/", (req, res) => {
+  res.send("<h1>Backend API is running ✅</h1><p>Mero backend chalu bhayo huss kta ho. Damiii.</p>");
 });
 
-app.get("/", (req,res) => res.json({ message: "Backend API running" }));
 
 /* ---------- START ---------- */
 app.listen(PORT, () => {
