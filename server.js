@@ -51,6 +51,7 @@ app.use((req, res, next) => {
 });
 
 /* ------------------- STATIC FRONTEND PAGES ------------------- */
+// Serve HTML pages for main routes and admin dashboard")
 app.get("/", (req, res) =>
   res.sendFile(path.join(__dirname, "../frontend/html/homepage.html"))
 );
@@ -72,7 +73,7 @@ app.get("/api/support", (req, res) =>
 app.get("/api/feedback", (req, res) =>
   res.sendFile(path.join(__dirname, "../frontend/html/feedback.html"))
 );
-// GOES TO SIGNUP
+
 app.get("/api/signup", (req, res) =>
   res.sendFile(path.join(__dirname, "../frontend/html/signup.html"))
 );
